@@ -1,0 +1,12 @@
+---
+- name: Deploy TODO App
+  hosts: all
+  become: true
+  vars:
+    app_repo: "https://github.com/Code-etp/DevOps-Stage-4.git"
+    app_dir: "/opt/todo-app"
+    domain: "code-etp.name.ng"
+  
+  roles:
+    - dependencies
+    - deployment
